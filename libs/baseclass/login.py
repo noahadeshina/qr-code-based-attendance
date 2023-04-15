@@ -33,7 +33,8 @@ class LoginScreen(Screen):
                     self.manager.transition.direction = "left"
                     self.manager.transition.duration = 0.5
                     app.show_screen("classes")
-                    toast('Success. Start scanning, ' + i[1] + '!')
+                    toast('Login Successful')
+                    toast('Welcome, ' + i[1] + '!')
             else:
                 return toast('Please enter correct email and password.')
         else:

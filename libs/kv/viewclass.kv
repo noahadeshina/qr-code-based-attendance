@@ -17,11 +17,11 @@
 		size_hint: 0.88, 0.20
 		canvas:
 			Color:
-				rgba: rgba('#8E8686')
+				rgba: rgba('#42b6f5')
 			RoundedRectangle:
 				size: self.size
 				pos: self.pos
-				radius: [40, 40, 40, 40]
+				radius: [0, 0, 0, 0]
 
         MDCard:
             id: class_title
@@ -34,7 +34,7 @@
             text_color: rgba('#8E8686')
             pos_hint: {'center_y': 0.625, 'center_x': 0.625}
             size_hint: 0.55, 0.25
-            radius: [20,]
+            radius: [5,]
 
             MDLabel:
                 id: class_name
@@ -50,19 +50,19 @@
             multiline: True
             markup: True
             halign: 'center'
-            font_size: '13dp'
+            font_size: '14dp'
             theme_text_color: 'Custom'
             md_bg_color: rgba('#FFFFFF')
             text_color: rgba('#8E8686')
             pos_hint: {'center_y': 0.365, 'center_x': 0.625}
             size_hint: 0.55, 0.17
-            radius: [15,]
+            radius: [5,]
 
             MDLabel:
                 id: section_name
                 text: "Section"
                 markup: True
-                font_size: '8dp'
+                font_size: '14dp'
                 halign: 'center'
                 theme_text_color: 'Custom'
                 text_color: rgba('#8E8686')
@@ -76,7 +76,7 @@
 			RoundedRectangle:
 				size: self.size
 				pos: self.pos
-				radius: [30,]
+				radius: [15,]
 
         MDIcon:
             pos_hint: {'center_x': 0.5, 'center_y' : 0.5}
@@ -87,37 +87,21 @@
             text_color: rgba('#8E8686')
 
 	MDFillRoundFlatButton:
-		text: "[b] ON-TIME [/b]"
+		text: "[b] SCAN QRCODE [/b]"
         multiline: True
         markup: True
         halign: 'center'
-        font_size: '10dp'
+        font_size: '14dp'
 		theme_text_color: 'Custom'
 		md_bg_color: rgba('#83C285')
 		text_color: rgba('#FFFFFF')
-		pos_hint: {'center_y': 0.650, 'center_x': 0.160}
+		pos_hint: {'center_y': 0.650, 'center_x': 0.260}
         size_hint: 0.20, 0.15
         radius: [40, 40, 40, 40]
         on_press:
             root.ontime_scan()
             app.show_screen("scan")
 
-	MDFillRoundFlatButton:
-		text: "[b] LATE [/b]"
-        bold: True
-        multiline: True
-        markup: True
-        halign: 'center'
-        font_size: '10dp'
-		theme_text_color: 'Custom'
-		md_bg_color: rgba('#C96969')
-		text_color: rgba('#FFFFFF')
-		pos_hint: {'center_y': 0.650, 'center_x': 0.410}
-        size_hint: 0.20, 0.15
-        radius: [40, 40, 40, 40]
-        on_press:
-            root.late_scan()
-            app.show_screen("scan")
 
 	MDFillRoundFlatButton:
 		text: "[b] EXPORT ATTENDANCE [/b]"
@@ -131,7 +115,7 @@
 		text_color: rgba('#FFFFFF')
 		pos_hint: {'center_y': 0.693, 'center_x': 0.745}
         size_hint: 0.385, 0.060
-        radius: [40, 40, 40, 40]
+        radius: [20, 20, 20, 20]
         on_press:
             root.export_excel()
 
@@ -147,7 +131,7 @@
 		text_color: rgba('#FFFFFF')
 		pos_hint: {'center_y': 0.610, 'center_x': 0.745}
         size_hint: 0.385, 0.060
-        radius: [40, 40, 40, 40]
+        radius: [20, 20, 20, 20]
         on_press:
             root.delete_class_dialog()
 
@@ -160,7 +144,7 @@
 			RoundedRectangle:
 				size: self.size
 				pos: self.pos
-				radius: [40, 40, 40, 40]
+				radius: [0, 0, 0, 0]
 
     MDLabel:
         text: '[b] STUDENTS [/b]'
@@ -213,9 +197,9 @@
     size: "250dp" , "30dp"
 	pos_hint: {"center_x": .5, "center_y": .5}
 	radius: 15,15,15,15
-	elevation: 5
+	elevation: 2
 	padding: '15dp'
-	spacing: '3dp'
+	spacing: '4dp'
 
     canvas:
         Color:
@@ -233,7 +217,7 @@
 
 	MDLabel:
 		text: root.name
-		font_size: '10dp'
+		font_size: '13dp'
 		markup: True
         bold: True
 		halign: "left"
@@ -251,7 +235,7 @@
 
     MDTextField:
 		id: stud_list
-        hint_text: "List of Students or Student Name"
+        hint_text: "Student Name"
 		line_color_focus: rgba('#303030')
 
 	MDFillRoundFlatButton:
